@@ -4,14 +4,7 @@ import {
   Text,
   View,
 } from 'react-native'
-
-export default (props) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.label}>start from here</Text>
-    </View>
-  )
-}
+import Row from './Row'
 
 const styles = StyleSheet.create({
   container: {
@@ -20,9 +13,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  label: {
-    textAlign: 'center',
-    fontSize: 36,
-    color: '#333333',
-  },
 })
+
+export default props => {
+  return (
+    <View style={styles.container}>
+      <Row label='Name'>
+        <Text>contents</Text>
+      </Row>
+    </View>
+  )
+}
