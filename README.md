@@ -4,6 +4,7 @@ React Hooks sample on React Native
 
 ## Getting Started
 
-Clone this repo to your local env, then do steps in following comments by @hramos
+1. Clone this repo to your local env
+2. Run `./bin/setup.sh`
 
-https://github.com/facebook/react-native/issues/21967#issuecomment-434113687
+refer: https://github.com/facebook/react-native/issues/21967#issuecomment-434113687
