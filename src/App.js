@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {
   StyleSheet,
   Text,
+  TextInput,
   View,
 } from 'react-native'
 import Row from './Row'
@@ -13,13 +14,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
+  input: {
+    height: 40,
+    width: 240,
+    fontSize: 36,
+  },
 })
 
 export default props => {
+  const [name, setName] = useState('Mary')
+
+  function handleNameChange(newValue) {
+    setName(newValue)
+  }
+
   return (
     <View style={styles.container}>
       <Row label='Name'>
-        <Text>contents</Text>
+        <TextInput
+          value={name}
+          onChangeText={handleNameChange}
+          style={styles.input}
+        />
       </Row>
     </View>
   )
