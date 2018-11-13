@@ -11,10 +11,4 @@ if [ ! -d ./node_modules ]; then
   exit 1
 fi
 
-TMP=$(mktemp -d)
-#trap 'rm -rf ${TMP}' EXIT
-
-ZIP="./bin/react-native.zip"
-
-unzip -d "${TMP}/" ${ZIP}
-cp -rf "${TMP}"/react-native/* ./node_modules/react-native/Libraries/Renderer/
+cp -rf ./bin/Renderer/* ./node_modules/react-native/Libraries/Renderer/
