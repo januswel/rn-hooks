@@ -23,9 +23,13 @@ const styles = StyleSheet.create({
 
 export default props => {
   const [name, setName] = useState('Mary')
+  const [surname, setSurname] = useState('Poppins')
 
   function handleNameChange(newValue) {
     setName(newValue)
+  }
+  function handleSurnameChange(newValue) {
+    setSurname(newValue)
   }
 
   return (
@@ -34,6 +38,13 @@ export default props => {
         <TextInput
           value={name}
           onChangeText={handleNameChange}
+          style={styles.input}
+        />
+      </Row>
+      <Row label='Surname'>
+        <TextInput
+          value={surname}
+          onChangeText={handleSurnameChange}
           style={styles.input}
         />
       </Row>
