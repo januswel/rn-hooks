@@ -8,3 +8,7 @@ React Hooks sample on React Native
 2. `yarn`
 
 refer: https://github.com/facebook/react-native/issues/21967#issuecomment-434113687
+
+## Demo
+
+![demo](./demo.gif)
