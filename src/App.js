@@ -1,8 +1,10 @@
 import React, {
   useContext,
+  useEffect,
   useState,
 } from 'react'
 import {
+  Alert,
   StyleSheet,
   Text,
   TextInput,
@@ -33,6 +35,10 @@ export default props => {
   const surname = useTextInput('Poppins')
   const theme = useContext(ThemeContext)
   const locale = useContext(LocaleContext)
+
+  useEffect(() => {
+    Alert.alert('corresponds componentDidMount')
+  }, [])
 
   return (
     <View style={[styles.container, theme]}>
