@@ -11,4 +11,4 @@ refer: https://github.com/facebook/react-native/issues/21967#issuecomment-434113
 
 ## Demo
 
-![demo](./demo.gif)
+<img title="demo" src="./demo.gif" height="640" />
