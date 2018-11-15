@@ -1,4 +1,7 @@
-import React, { useState, useContext } from 'react'
+import React, {
+  useContext,
+  useState,
+} from 'react'
 import {
   StyleSheet,
   Text,
@@ -26,33 +29,22 @@ const styles = StyleSheet.create({
 })
 
 export default props => {
-  const [name, setName] = useState('Mary')
-  const [surname, setSurname] = useState('Poppins')
+  const name = useTextInput('Mary')
+  const surname = useTextInput('Poppins')
   const theme = useContext(ThemeContext)
   const locale = useContext(LocaleContext)
-
-  function handleNameChange(newValue) {
-    setName(newValue)
-  }
-  function handleSurnameChange(newValue) {
-    setSurname(newValue)
-  }
-
-  console.log(theme, locale)
 
   return (
     <View style={[styles.container, theme]}>
       <Row label='Name'>
         <TextInput
-          value={name}
-          onChangeText={handleNameChange}
+          {...name}
           style={[styles.input, theme]}
         />
       </Row>
       <Row label='Surname'>
         <TextInput
-          value={surname}
-          onChangeText={handleSurnameChange}
+          {...surname}
           style={[styles.input, theme]}
         />
       </Row>
@@ -61,4 +53,17 @@ export default props => {
       </Row>
     </View>
   )
+}
+
+function useTextInput(initialValue) {
+  const [value, setValue] = useState(initialValue)
+
+  function handleChange(newValue) {
+    setValue(newValue)
+  }
+
+  return {
+    value,
+    onChangeText: handleChange,
+  }
 }
