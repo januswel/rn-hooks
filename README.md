@@ -1,6 +1,7 @@
 # rn-hooks
 
 React Hooks sample on React Native
+refer: https://www.youtube.com/watch?v=dpw9EHDh2bM
 
 ## Getting Started
 
